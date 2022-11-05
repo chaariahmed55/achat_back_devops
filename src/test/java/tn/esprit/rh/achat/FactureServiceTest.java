@@ -38,7 +38,6 @@ public class FactureServiceTest {
 		assertThat(Factureadd.getIdFacture()).isSameAs(Factureadd.getIdFacture());
 	}
 
-	
 	@Test
 	public void RetrieveAllFactureTest() {
 		List<Facture> facture = new ArrayList();
@@ -49,14 +48,12 @@ public class FactureServiceTest {
 		verify(sr).findAll();
 	}
 
-	
 	@Test
 	public void DeleteFactureIfExistTest() {
 		Facture facture = new Facture();
 		facture.setIdFacture(1L);
 		facture.setArchivee(null);
 		facture.setDateCreationFacture(null);
-		 System.out.println("testdeletefacture");
 		 System.out.println("testdeletefacture");
 		 ss.cancelFacture(66L);
 		 Mockito.verify(sr, times(0)).delete(facture);
