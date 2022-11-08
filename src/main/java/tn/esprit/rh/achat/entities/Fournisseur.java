@@ -44,6 +44,14 @@ public class Fournisseur implements Serializable {
     @OneToOne(cascade= CascadeType.ALL,fetch=FetchType.EAGER)
     private DetailFournisseur detailFournisseur;
     
+    
+    public Fournisseur(long idFournisseur, String code, String libelle, CategorieFournisseur ordinaire) {
+        this.idFournisseur = idFournisseur;
+        this.code = code;
+        this.libelle = libelle;
+        this.categorieFournisseur = ordinaire;
+    }
 
+    
 	
 }
